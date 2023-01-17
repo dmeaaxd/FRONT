@@ -1,0 +1,34 @@
+<div class="text-center surface-card p-4 shadow-2 border-round lg:w-27rem inline-block">
+  <form
+    [formGroup]="form"
+    style="margin-top: 50px; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; font-size: 24px;">
+    <div class="authReg">
+
+      <div class="signin">
+        <label for="login" class="mr-3">логин</label>
+        <div class="text-center mb-2">
+          <input
+            formControlName="login" class="mt-2"
+            id="login" type="text" pInputText>
+        </div>
+
+        <label for="password" class="mr-3">пароль</label>
+        <div class="text-center mb-2">
+          <input
+            formControlName="password" class="mt-2"
+            id="password" type="password" pInputText>
+        </div>
+      </div>
+
+      <div class="mt-7">
+        <button [disabled]="form.invalid" type="submit" (click)="onSubmitRegister()" pButton pRipple label="Зарегистрироваться"
+                icon="pi pi-user"></button>
+      </div>
+
+      <div class="submitButton">
+        <button [disabled]="form.invalid" class="w-13rem" type="submit" (click)="onSubmitLogin()" pButton pRipple label="Войти" icon="pi pi-user"
+                style="margin-top: 7px;"></button>
+      </div>
+    </div>
+  </form>
+</div>

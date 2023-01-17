@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="text-center mb-5">
+  <form action="./login">
+    <button id="exit" pButton pRipple>Выход</button>
+  </form>
+</div>
+
+<app-graph [hits]="hits" [rFromInputField]="R" #graphComponent></app-graph>
+
+<div class="text-center mt-5">
+  <app-hit-form [hits]="hits" [(r)]="R" (deleteEvent)="graphComponent.removePoints()" (hitEvent)="graphComponent.drawPoint($event)"></app-hit-form>
+</div>
+<app-table class="mr-3" [hits]="hits"></app-table>

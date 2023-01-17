@@ -1,0 +1,18 @@
+<p-table [value]="hits" [tableStyle]="{}">
+  <ng-template pTemplate="header">
+    <tr id="header">
+      <th style="width: 25%;">X</th>
+      <th style="width: 25%;">Y</th>
+      <th style="width: 25%;">R</th>
+      <th style="width: 25%;">Результат</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-hit>
+    <tr>
+      <td>{{hit.x}}</td>
+      <td>{{hit.y}}</td>
+      <td>{{hit.r}}</td>
+      <td>{{hit.hit}}</td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,66 @@
+<div class="text-center surface-card p-4 shadow-2 border-round lg:w-27rem inline-block mb-7">
+  <div
+    style="text-align: center;margin-top: 50px; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; font-size: 14px;">
+    <form [formGroup]="form">
+
+      <div class="form_X">
+        <label for="username1" class="block text-1xl"> Значение Х</label>
+        <div class="field mt-5">
+          <div class="form_radio_btn">
+            <input formControlName="x" id="username1" type="radio" value="-4" aria-describedby="username1-help"  />
+            <label for="username1">-4</label>
+            <input formControlName="x" id="username12" type="radio" value="-3" aria-describedby="username1-help" />
+            <label for="username12">-3</label>
+            <input formControlName="x" id="username13" type="radio" value="-2" aria-describedby="username1-help" />
+            <label for="username13">-2</label>
+            <input formControlName="x" id="username14" type="radio" value="-1" aria-describedby="username1-help" />
+            <label for="username14">-1</label>
+            <input formControlName="x" id="username15" type="radio" value="0" aria-describedby="username1-help" />
+            <label for="username15">0</label>
+            <input formControlName="x" id="username16" type="radio" value="1" aria-describedby="username1-help" />
+            <label for="username16">1</label>
+            <input formControlName="x" id="username17" type="radio" value="2" aria-describedby="username1-help" />
+            <label for="username17">2</label>
+            <input formControlName="x" id="username18" type="radio" value="3" aria-describedby="username1-help" />
+            <label for="username18">3</label>
+            <input formControlName="x" id="username19" type="radio" value="4" aria-describedby="username1-help" />
+            <label for="username19">4</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form_Y">
+        <label for="username2" class="block">Значение Y</label>
+        <div class="field mt-5">
+          <input formControlName="y" placeholder="(-3...3)" id="username2" type="number" aria-describedby="username2-help" pInputText/>
+        </div>
+      </div>
+
+      <div class="form_R">
+        <label for="username3" class="block">Значение R</label>
+        <div class="field mt-5">
+          <div class="form_radio_btn">
+            <input formControlName="r" id="username3" (input)="onChangeR($event)" type="radio" value="1" aria-describedby="username3-help" />
+            <label for="username3">1</label>
+            <input formControlName="r" id="username32" (input)="onChangeR($event)" type="radio" value="2" aria-describedby="username3-help" />
+            <label for="username32">2</label>
+            <input formControlName="r" id="username33" (input)="onChangeR($event)" type="radio" value="3" aria-describedby="username3-help" />
+            <label for="username33">3</label>
+            <input formControlName="r" id="username34" (input)="onChangeR($event)" type="radio" value="4" aria-describedby="username3-help" />
+            <label for="username34">4</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button [disabled]="form.invalid" class="mt-5 w-13rem" type="submit" (click)="requestHit()" pButton pRipple label="Добавить" icon="pi pi-user"></button>
+        <button type="reset" pButton pRipple>Сброс</button>
+      </div>
+      <button id="submit" class="mt-5 w-13rem" type="submit" (click)="deleteHits()" pButton pRipple label="Очистить таблицу" icon="pi pi-user"></button>
+
+
+
+
+    </form>
+  </div>
+</div>
